@@ -1,0 +1,643 @@
+%in
+	width: 960px
+	width: 56%
+	margin: 0 auto
+//@media only screen and (max-width: 1310px)
+@include max-screen(1310px)
+	%in
+		width: 98%
+		margin: 0 auto
+@include screen(1310px, 1732px)
+	%in
+		width: 78%
+		margin: 0 auto
+
+$hh : 80px
+$hn : 65px
+$hs : 563px
++font(Montserrat,Montserrat-Regular)
++font(Montserrat_BOLD,Montserrat-Bold)
+
+
+@include keyframes(moving) 
+	0% 
+		background-position: 0 0
+
+	100%
+		background-position: 0 500px
+*
+	+box
+.container	
+
+	background-color: rgb(246,246,246)
+.header
+	
+	.header_in
+		
+
+.logo
+	background-color: #353b3d
+	height: $hh
+	overflow: hidden
+
+	width: 100%
+	position: fixed
+	z-index: 1000
+	top: 0
+	left: 0
+
+	transition-duration: .5s
+	transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 )
+	transition-property: transform
+	.logo_in
+		@extend %in
+		height: inherit
+	
+		+clr
+	.box
+		float: left
+		width: 74px
+		height: $hh
+		display: inline-block
+		background-color: #f16b4f 
+		box-shadow:  0 3px 0 #d04e32 
+		position: relative
+		
+		i
+			+s(pen)
+			position: absolute
+			top: 50%
+			left: 50%
+			margin-top: -12px
+			margin-left: -12px
+	a 
+		text-decoration: none
+		color: #fff // text color
+		font-family: "Montserrat"
+		font-size: 24px
+		font-weight: bold
+		text-transform: uppercase
+
+	.header_logo
+		float: left
+		display: inline-block
+		cursor: pointer
+		height: $hh
+		line-height: $hh
+		vertical-align: middle
+		margin-left: 35px 
+		svg 
+			width: 100%
+			height: 100%
+
+
+
+		.text
+			//background-color: rgb(246,246,246)
+			
+				// Webkit animation letters
+		em
+			font-style: normal
+			strong
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+				//set the background gradient
+				background-image: linear-gradient(to top, #2c539e 0%,#37AAC6 50%,#2c539e 100%)
+				// set the animation
+
+				//-webkit-animation: moving 20s ease infinite
+				@include animation(moving 20s ease infinite)
+				border-spacing: 0
+ 
+	.kredo
+		float: right
+		height: $hh
+		max-margin-left: 330px
+		color: #949494 // text color
+		font-family: "Montserrat"
+		font-size: 13px
+		line-height: $hh
+		vertical-align: middle
+		font-style: normal
+		display: inline-block
+		letter-spacing: -1px
+.logo--hidden
+	-webkit-transform: translateY( -100% )
+	-ms-transform: translateY( -100% )
+	transform: translateY( -100% )
+
+.open
+	height: 100px !important
+.topnav
+	width: auto
+	height: $hn
+	background-color: #3f494c 
+	box-shadow: inset 0 -3px 0 #040405
+	overflow: hidden
+
+	margin-top: $hh
+
+	.topnav_in
+		@extend %in	
+
+
+		.nav
+			display: inline-block
+			float: left
+			height: $hn
+			+r(pda)
+				float: none
+				width: 100%
+		ul 
+			line-height: $hn
+			vertical-align: middle
+			+r(pda)
+				width: 100%
+		a
+			text-decoration: none
+			margin-left: 20px
+			padding: 22px 5px
+			color: #717a7e // text color
+			font-family: "Montserrat"
+			font-size: 13px
+			text-transform: uppercase
+			
+			+r(pda)
+				font-size: 26px
+				width: 100%
+				margin-left: 0px
+				padding: 0px 0px
+				display: inline-block
+				width: 100%
+				&:active
+					background-color: #cc4164	
+
+		.mmenu
+			display: none
+			+r(pda)
+				display: inline-block
+				cursor: pointer
+				padding: 0 
+				margin-left: 0
+			&:active
+				background-color: #cc4164
+			
+			
+			
+			
+
+		li 
+
+			display: inline-block
+			+r(pda)
+				width: 100%
+				text-align: center
+
+			
+			
+		:first-child
+			margin-left: 14px
+		.search
+			position: relative
+			float: right
+			// width: 203px
+			height: 62px
+			background-color: #3c4245 
+			//display: inline-block
+			// position: absolute
+			// right: 0
+			// top: 0
+			// overflow: hidden
+			+r(pda)
+				float: none
+				margin: 50px auto 0
+				//width: 80%
+			i
+				+s(search)
+				position: absolute
+				right: 28px
+				top: 50%
+				margin-top: -10px
+				cursor: pointer
+
+			input
+				margin-left: 30px
+				margin-right: 60px
+				min-width: 203px-60px
+				height: 62px
+				color: #717a7e
+				background-color: transparent
+				+placeholder-color(#717a7e)
+				font-family: "Montserrat"
+				font-size: 20px
+				display: block
+				max-width: 200px
+				transition: width 0.25s
+				+r(pda)
+					min-width: 50%
+					max-width: 75%
+
+.slider
+
+	.slider_in
+		@extend %in
+		//height: $hs
+		width: 75%
+		position: relative
+		margin-top: 25px-10px
+		//+clr
+		.left
+			position: absolute
+			+s(left)
+			display: block
+			top: 50%
+			margin-top: -21px
+			left: 0
+			margin-left: -60px
+			
+		.right
+			position: absolute
+			+s(right)
+			display: block
+			top: 50%
+			margin-top: -21px
+			right: 0
+			margin-right: -60px
+		.pic
+			margin-left: -10px
+			margin-bottom: 22px
+			line-height: 0
+
+			border: 10px solid #fff
+			opacity: .7 
+			background-color: #fff
+			text-align: center
+			display: inline-block
+			position: relative
+			//height: 100%
+			width: 100%
+	
+
+			img
+				// height: 100% !important
+				// width: auto !important
+				// min-width: none !important
+				// max-width: none !important
+				margin: 0 auto
+				padding-top: 51%
+				display: block
+				height: 0
+		#pic1
+			background-image: url('http://lorempixel.com/1200/616/sports')
+			background-size: cover
+		#pic2
+			background-image: url('http://lorempixel.com/1200/616/fashion')
+			background-size: cover
+		#pic3
+			background-image: url('http://lorempixel.com/1200/616/cats')
+			background-size: cover
+
+
+		// .cycle-slideshow
+		// 	width: 55%
+			// .pic #cafe 
+			// 	width: 100%
+			// 	display: inline-block
+			// 	vertical-align: middle
+			// 	font: 0/0 serif
+			// 	text-shadow: none
+			// 	color: transparent
+			// 	background-size: 100%
+			// 	background-position: 50% 50%
+			// 	background-repeat: no-repeat
+			// 	background-image: url("http://lorempixel.com//1198/616")
+			// 	.inner 
+			// 	padding-top: 51%
+			// 	display: block
+			// 	height: 0
+
+		.circle
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 50%
+			height: 91%
+			border: 20px solid #f5f5f5 
+			border-radius: 50% 
+			background-clip: padding-box  
+			background-color: #fff 
+			box-shadow: 0 1px 1px #000
+			display: block	
+			opacity: .5
+			z-index: 106 !important
+			// transition: all 2s ease-in-out
+			// transform: scale(1)
+			// &:hover
+			// 	transform: scale(2)
+
+			.circle_text
+				// margin-top: -10px
+				// height: inherit
+				// display: flex
+				// justify-content: center
+				// flex-direction: column
+				display: block
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				text-align: center
+				z-index: 100
+
+				.black
+					display: block
+					
+					color: #454545 // text color
+					font-family: "Montserrat"
+					font-size: 51px
+					line-height: 51px
+					font-weight: bold
+					+r(pda)
+						font-size: 26px
+						line-height: 26px
+				
+
+				.small
+					display: block
+					
+					color: #949494 // text color
+					font-family: "Montserrat"
+					font-size: 13px
+					line-height: 13px
+					+r(pda)
+						display: none
+					
+
+				.orange
+					display: block
+					
+					color: rgb(244,127,102) // text color
+					font-family: "Montserrat"
+					font-size: 51px
+					font-weight: bold
+					line-height: 51px
+					margin-bottom: 38px
+					+r(pda)
+						font-size: 26px
+						line-height: 26px
+					
+
+	.subpic_text
+		@extend %in
+		width: 80%
+		.big
+			line-height: 52px
+			font-family: "Montserrat"
+			font-size: 24px
+			font-weight: normal
+			color: #777777
+			text-align: center
+			letter-spacing: -2px
+		.small
+			line-height: 20px
+			font-family: "Montserrat"
+			font-size: 12px
+			font-weight: normal
+			color: #cccccc
+			text-align: center
+			letter-spacing: 1px
+			margin-bottom: 25px
+.thumbnails
+
+	.sw		
+		+clr
+		background: transparent
+		margin-right: 5px
+		margin-bottom: 10px
+		width: 100%
+		.left
+			+s(l)
+			display: inline-block
+			float: right
+			opacity: .6
+			&:hover
+				opacity: 1
+		.right
+			+s(r)
+			display: inline-block
+			float: right
+			margin-left: 10px
+			opacity: .6
+			&:hover
+				opacity: 1
+	.thumbnails_in
+		@extend %in
+		+clr
+
+		margin-bottom: 35px
+	.sw + .thumbnail
+		background-color: transparent
+		margin-top: 20px
+		box-shadow:  0 3px 0 transparent
+
+	.row
+
+		display:block-inline
+		overflow: hidden
+		height: 520px
+	.thumbnail
+		display: inline-block
+		width: 230px
+		height: 488px
+		margin: 5px
+		float: left
+		margin-top: 25px
+		background-color: #fff
+		box-shadow: 0 6px 0 #eaeaea
+		overflow: hidden
+		.big
+
+			color: #353b3d // text color
+			font-family: "Montserrat"
+			font-size: 16px
+			text-align: left
+			line-height: 28px
+			text-transform: uppercase
+		.small
+			line-height: 20px
+			font-family: "Montserrat"
+			font-size: 12px
+			font-weight: normal
+			color: #8f8f8f
+			text-align: left
+			letter-spacing: 1px
+
+		.under_pic
+			display: table
+			overflow: hidden
+		.pic
+
+			line-height: 0
+			box-shadow:  0px 6px 0 #e05d41 // inner shadow
+
+		.pic_meta
+			padding-top: 21px
+			padding-left: 40px
+			padding-bottom: 10px
+			padding-right: 40px
+			overflow: hidden
+			white-space: normal
+			>p:last-child
+				line-height: 20px
+				font-family: "Montserrat"
+				font-size: 12px
+				font-weight: normal
+				color: #8f8f8f
+				text-align: left
+				letter-spacing: 1px
+		.title
+			line-height: 35px
+			text-align: left
+			vertical-align: center
+			color: #f26c4f
+			text-decoration: none
+			font-family: "Montserrat"
+			font-size: 16px
+			font-style: normal
+			text-transform: uppercase
+			letter-spacing: 0.5px
+			word-spacing: -1px
+
+#time
+	font-style: bold
+	text-transform: uppercase
+	font-family: "Montserrat_BOLD"
+	color: black
+	line-height: 30px
+	vertical-align: middle
+
+
+.thumbnails__bottom_in
+	@extend %in
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	// .settings,
+	// .camera
+
+	.camera
+		margin-right: 0
+	.settings .thumbnail_bottom
+		&:nth-of-type(2)
+			background-color: #f16b4f 
+			box-shadow:  0 -3px 0 #e05d41
+			.pic
+				+s(settings)
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+	.camera .thumbnail_bottom
+		&:nth-of-type(2)
+			background-color: rgb(53,60,62) 
+			box-shadow: inset 0 -3px 0 #000
+			.pic
+				+s(camera)
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+	.thumbnail_bottom
+		display: inline-block
+		width: 230px
+		height: 249px
+		background-color: #fff
+		// soverflow: hidden 
+		
+		position: relative
+		
+
+		.pic_meta
+			display: inline-block
+			padding-top: 21px
+			padding-left: 40px
+			padding-bottom: 10px
+			height: 100%
+			width: 230px
+			padding-right: 40px
+			overflow: hidden
+			white-space: normal
+		
+			overflow: hidden
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: -15px
+				box-shadow: inset  -25px -15px 0 white
+			
+			>p:last-child
+				display: inline-block
+				line-height: 20px
+				font-family: "Montserrat"
+				font-size: 12px
+				font-weight: normal
+				color: #8f8f8f
+				text-align: left
+				letter-spacing: 1px
+				
+		.title
+			line-height: 35px
+			text-align: left
+			vertical-align: center
+			color: #f26c4f
+			text-decoration: none
+			font-family: "Montserrat"
+			font-size: 16px
+			font-style: normal
+			letter-spacing: 0.5px
+			word-spacing: -1px
+.footer
+	.footer_in
+	@extend %in
+	.footer_text
+		margin-top: 45px
+		padding-bottom: 110px
+		margin-left: 10px
+		margin-right: 10px
+		.title
+			font-style: bold
+			text-transform: uppercase
+			font-family: "Montserrat_BOLD"
+			color: black
+			line-height: 30px
+			vertical-align: middle
+			text-align: right
+		.sub
+			display: inline-block
+			line-height: 20px
+			font-family: "Montserrat"
+			font-size: 12px
+			font-weight: normal
+			color: #8f8f8f
+
+			letter-spacing: 1px
+			text-align: right
+			
+
+
+
+
+
+
+
+
+
+
+ 
+	

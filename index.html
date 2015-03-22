@@ -1,0 +1,307 @@
+<!doctype html>
+<!--[if lte IE 13]><html class="lteie13"><![endif]-->
+<!--[if gt IE 13]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Illustrate</title>
+	<meta name="viewport" content="initial-scale=6"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link rel="shortcut icon" type="image/x-icon" href="img/icons/favicon.ico">
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/cycle.js"></script>
+	<script src="js/carousel.js"></script>
+
+	<script src="js/AutosizeInput.js"></script>
+	
+</head>
+<body>
+	<div class="container">
+		<div class="header"><div class="header_in">
+			<div class="logo">
+				<div class="logo_in">
+					<div class="box"><i></i></div>
+					<a href="#" class="header_logo">
+						<!-- <em><strong>Illustarate</strong> </em> -->
+							<svg viewBox="0 0 220 50">
+							
+							
+								<linearGradient id="gr"
+								x1="50%" y1="0%" x2="50%" y2="100%">
+								<stop offset="0%" stop-color= "#2c539e" />
+								<stop offset="50%" stop-color= "#37AAC6" />
+								<stop offset="100%" stop-color= "#2c539e" >
+									<animate attributeName="stop-color" 
+									values="#2c539e;#37AAC6;#2c539e;#111;#22139e;#2c539e"
+									dur="1s" repeatCount="indefinite" />
+								</stop>    
+							
+							
+							
+								<animate attributeName="y2" 
+							 		values="0%;20%;40%;100%;40%;20%;0%;"
+									dur="1s" repeatCount="indefinite" />
+							
+							
+							
+								</linearGradient>
+							
+								
+								<text text-anchor="middle"
+								x="50%"
+								y="50%"
+								dy=".35em"
+								class="text"
+								fill= "url(#gr)"
+								
+								>
+									Illustarate
+								</text>
+							</svg>
+					</a>
+					<div  class="kredo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet</div>
+				</div>
+			</div>
+			<div class="topnav">
+				<div class="topnav_in">
+					<div class="nav">
+						<ul >
+							<li><a class="mmenu">***MENU***</a>
+							<li><a href="#">home/</a></li>
+							<li><a href="#">about/</a></li>
+							<li><a href="#">art/</a></li>
+							<li><a href="#">work/</a></li>
+							<li><a href="#">ill/</a></li>
+							<li><a href="#">blog/</a></li>
+							<li><a href="#">contact/</a></li>
+						</ul>
+					</div>
+					<div class="search">
+						<input type="search" name="" placeholder="Search" data-autosize-input='{ "space": 30}' id="">
+						<i></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+	<div class="slider">
+		<!-- 	begin slider -->
+		<div class="slider_in">
+			<div class="cycle-slideshow" 
+			data-cycle-fx="fadeOut" 
+			data-cycle-slides="> div.pic" 
+			data-cycle-speed="500"            
+			data-cycle-timeout="7500000"
+			data-cycle-next="#next2" 
+			data-cycle-prev="#prev2" 
+			data-cycle-carousel-visible=1
+			data-cycle-overlay="#t"
+			data-cycle-overlay-template= '
+			<div class="black">{{title}}<br> Designer &amp; <br>Illustrator</div> <div class="orange">Createtor</div><div class="small">{{desc}}</div' >
+
+				<div id="pic1" class="pic" 
+				data-cycle-title="Graphic" 
+				data-cycle-desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Duis laoreet laoreet leo at dictum. ">
+				<img></div>
+
+				<div id="pic2" class="pic" 
+				data-cycle-title="Program"
+				data-cycle-desc = "Abra cadabra ipiscing elit. <br> Duis laoreet laoreet leo at dictum. ">
+				<img></div>
+
+				<div id="pic3" class="pic" 
+				data-cycle-title="jmhj"
+				data-cycle-desc = "Abra cadabra ipiscing elit. <br> Duis laoreet laoreet leo at dictum. ">
+				<img></div>
+
+<!-- 				<div class="pic" 
+				data-cycle-title="Program"
+				data-cycle-desc = "Abra cadabra ipiscing elit. <br> Duis laoreet laoreet leo at dictum. ">
+				<div id="cafe" role="img" aria-label="Coffee and croissant.">
+					<div class="inner">
+					</div>
+				</div>
+				</div> -->
+
+				<div class="circle"><div id = "t" class="circle_text"></div></div>
+				<a id ="next2" class="right"><i></i></a>
+				<a id ="prev2" class="left"><i></i></a>
+			</div>
+
+		
+		
+
+			<div class="subpic_text">
+				<div class="text_in">
+					<div class="big">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur nisi a dolor iaculis id viverra lectus facilisis. Curabitur diam tellus, fermentum id aliquet non, rhoncus et orci. </div>
+					<div class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur nisi a dolor iaculis id viverra lectus facilisis. Curabitur diam tellus, fermentum id aliquet non, rhoncus et orci. Aenean ac tellus turpis, nec porttitor elit.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 	end slider -->
+	<!--start thumbnails -->
+	<div class="thumbnails">
+		<!-- ROW 1 -->
+		<div class="thumbnails_in">
+			<div class="sw">
+				<a id ="next" class="right"><i></i></a>
+				<a id ="prev" class="left" ><i></i></a>
+				
+			</div>
+
+			<div class="thumbnail ">
+				<div class="big">Recent WOrk</div>
+				<div class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet laoreet leo at dictum.</div>
+			</div>
+			<!-- <div class="row"> -->
+			<div class="row cycle-slideshow" 
+			data-cycle-fx="carousel" 
+			data-cycle-slides="> div.thumbnail" 
+			data-cycle-timeout="0" 
+			data-cycle-carousel-visible=3
+    		
+			data-cycle-next="#next" 
+			data-cycle-prev="#prev" >
+				<div class="thumbnail">
+					<div class="pic"><img src="img/icons/pic1.png" alt="pic1"></div>
+					<div class="pic_meta">
+						<a href="#" class="title" >Me so hungry</a>
+						<p> em ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet laoreet leo at dictum. Sed egestas dignissim tincidunt. Nam sit amet quam sed dolor ullamcorper luctus. Nulla facilisi. Donec fringilla ante a
+						</p>
+
+					</div>
+				</div>
+
+				<div class="thumbnail ">
+					<a href="#"><div class="pic"><img src="img/icons/pic2.png" alt="pic1"></div></a>
+					<div class="pic_meta">
+						<a href="#" class="title" >Me so hungry</a>
+						<p> em ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet laoreet leo at dictum. Sed egestas dignissim tincidunt. Nam sit amet quam sed dolor ullamcorper luctus. Nulla facilisi. Donec fringilla ante a
+						</p>
+					</div>
+				</div>
+				
+				<div class="thumbnail ">
+					<div class="pic"><img src="img/icons/pic3.png" alt="pic1"></div>
+					<div class="pic_meta">
+						<a href="#" class="title" >Me so hungry</a>
+						<p> em ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet laoreet leo at dictum. Sed egestas dignissim tincidunt. Nam sit amet quam sed dolor ullamcorper luctus. Nulla facilisi. Donec fringilla ante a
+						</p>
+					</div>
+				</div>
+
+
+			</div>
+			<!-- end ROW 1 -->
+		</div>
+		<!-- end ROW 1 thumbnails_in-->
+
+
+		<!-- ROW 2 -->
+
+
+		<div class="thumbnails_in">
+			<div class="sw">
+				<a id="next1" class="right" href="#"><i></i></a>
+				<a id="prev1" class="left" href="#"><i></i></a>
+
+			</div>
+
+			<div class="thumbnail">
+				<div class="big">From the blog</div>
+				<div class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet laoreet leo at dictum.</div>
+			</div>
+			<div 
+			class="row cycle-slideshow" 
+			data-cycle-fx="carousel" 
+			data-cycle-slides="> div" 
+			data-cycle-timeout="0" 
+			data-cycle-carousel-visible=3
+			data-cycle-next="#next1" 
+			data-cycle-prev="#prev1" >
+				<div class="thumbnail">
+					<div class="pic"><img src="img/icons/pic4.png" alt="pic1"></div>
+					<div class="pic_meta">
+						<a href="#" class="title" ><p> Krzysztof</p> <p>  Nowak</p></a>
+						<div id ="time">14th April</div>
+						<p> em ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet laoreet leo at dictum. Sed =
+						</p>
+
+					</div>
+				</div>
+
+				<div class="thumbnail">
+					<div class="pic"><img src="img/icons/pic5.png" alt="pic1"></div>
+					<div class="pic_meta">
+						<a href="#" class="title" ><p> Krzysztof</p> <p>  Nowak</p></a>
+						<div id ="time">14th April</div>
+						<p> em ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet laoreet leo at dictum. Sed =
+						</p>
+					</div>
+				</div>
+				<div class="thumbnail">
+					<div class="pic"><img src="img/icons/pic6.png" alt="pic1"></div>
+					<div class="pic_meta">
+						<a href="#" class="title" ><p> Krzysztof</p> <p>  Nowak</p> </a>
+						<div id ="time">14th April</div>
+						<p> em ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet laoreet leo at dictum. Sed =
+						</p>
+					</div>
+				</div>
+
+
+			</div>
+			<!-- end ROW 2 -->
+		</div>
+		<!-- end ROW 2 thumbnails_in-->
+
+		<!-- buttom row -->
+		<div class="thumbnails__bottom_in">
+			<div class="settings">
+				<div class="thumbnail_bottom">
+					<div class="pic_meta">
+						<a href="#" class="title" >About the Author</a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet laoreet leo at dictum. Sed egestas dignissim tincidunt. Nam sit amet quam sed dolor ullamcorper luctus. Nulla facilisi. Donec fringilla ante a </p>
+					</div>
+				</div>
+				<div class="thumbnail_bottom">
+					<div class="pic"><i></i></div>
+
+				</div>
+			</div>
+			<div class="camera">
+				<div class="thumbnail_bottom">
+					<div class="pic_meta">
+						<a href="#" class="title" >We’ll It’s a bloody text box init?</a>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis laoreet laoreet leo at dictum. Sed egestas dignissim tincidunt. Nam sit amet quam sed dolor ullamcorper luctus. Nulla facilisi. Donec fringilla ante a </p>
+					</div>
+				</div>
+				<div class="thumbnail_bottom">
+					<div class="pic"><i></i></div>
+				</div>
+			</div>
+		</div>
+		<!-- end buttom row -->
+
+
+
+	</div>
+	<!--end thumbnails -->
+
+	<div class="footer">
+		<div class="footer_in">
+			<div class="footer_text">
+				<div class="title">Illustrations by Krzysztof Nowak</div>
+				<div class="sub">Duis euismod, mauris id rutrum volutpat, ipsum risus vestibulum metus, ac pharetra libero magna ac orci. Praesent sodales elit id sapien commodo placerat. Etiam varius dui vitae tellus hendrerit aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas justo justo, scelerisque quis porta et, euismod sodales est. Phasellus sit amet leo ac nisi pulvinar congue vitae at </div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+	
+</body>
+</html>
